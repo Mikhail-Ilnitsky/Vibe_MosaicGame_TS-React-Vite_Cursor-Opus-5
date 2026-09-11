@@ -2,7 +2,16 @@
 
 Адаптивная браузерная игра-мозаика: выберите картинку, выберите сложность и соберите изображение из перемешанных квадратных фрагментов. Это чистый фронтенд (SPA) — без бэкенда, базы данных и сохранения состояния на сервере.
 
-**Демо:** https://<ваш-логин>.github.io/Vibe_MosaicGame_TS-React-Vite_Cursor-Opus-5/
+**Демо:** [mikhail-ilnitsky.github.io/Vibe_MosaicGame_TS-React-Vite_Cursor-Opus-5](https://mikhail-ilnitsky.github.io/Vibe_MosaicGame_TS-React-Vite_Cursor-Opus-5/)
+
+## Особенности
+
+Собрано по подробному промпту с помощью **Claude-Opus-5-Thinking-High**
+
+Начальный промпт (он же последний - сразу сделано идеально):
+- 2 запуска (автоматически) Claude-Opus-5-Thinking-High = 8011 + 543 = 8555 Ktokens
+
+Всего в сумме: 8555 Ktokens = 8.5 Mtokens
 
 ## Возможности
 
@@ -16,11 +25,12 @@
 
 ## Стек
 
-- [React](https://react.dev/) 19.3
-- [TypeScript](https://www.typescriptlang.org/) 5.9
-- [Vite](https://vite.dev/) 8.3
-- [Tailwind CSS](https://tailwindcss.com/) 4.3 (через плагин `@tailwindcss/vite`)
-- ESLint 10 с `typescript-eslint`, `eslint-plugin-react-hooks` и `eslint-plugin-react-refresh`
+| Технология    | Версия |
+|---------------|--------|
+| React         | 19.3.0 |
+| TypeScript    | 5.9.3  |
+| Vite          | 8.3.0  |
+| Tailwind CSS  | 4.3.3  |
 
 ## Происхождение проекта
 
@@ -29,12 +39,17 @@
 ## Запуск
 
 ```bash
-npm install      # установка зависимостей
-npm run dev      # дев-сервер Vite на http://localhost:5173
-npm run build    # проверка типов (tsc -b) и production-сборка в dist/
-npm run preview  # локальный просмотр собранного проекта на http://localhost:4173
-npm run lint     # ESLint по всему проекту
-npm run typecheck # только проверка типов
+npm install        # установка зависимостей
+npm run dev        # дев-сервер Vite на http://localhost:5173
+```
+
+Другие команды:
+
+```bash
+npm run build      # проверка типов (tsc -b) и production-сборка в dist/
+npm run preview    # локальный просмотр собранного проекта на http://localhost:4173
+npm run lint       # ESLint по всему проекту
+npm run typecheck  # только проверка типов
 ```
 
 Локально приложение открывается с корня, без префикса репозитория: в `vite.config.ts` для сборки задан относительный `base: './'`, который одинаково работает и в `npm run preview`, и в подкаталоге GitHub Pages.
